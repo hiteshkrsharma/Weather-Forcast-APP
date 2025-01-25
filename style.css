@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  .search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 1rem;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .weather-info h2, .weather-info p {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    backdrop-filter: brightness(90%);
+  }
+  
+  /* Animation for changing background images every 3 seconds */
+  @keyframes changeBackground {
+    5% { background-image: url('https://images.pexels.com/photos/1162251/pexels-photo-1162251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); }
+    33% { background-image: url(https://images.pexels.com/photos/531756/pexels-photo-531756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2); }
+    66% { background-image: url('https://images.pexels.com/photos/416920/pexels-photo-416920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); }
+    100% { background-image: url(https://images.pexels.com/photos/1571444/pexels-photo-1571444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2); }
+  }
+  
+  /* Apply animation to body */
+  body {
+    animation: changeBackground 9s infinite;
+  }
